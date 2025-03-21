@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4skm</title>
+    <title>@4skm♰</title>
     <style>
         body {
             display: flex;
@@ -58,7 +58,7 @@
         }
         .nickname {
             font-size: 32px;
-            font-family: "Arial", sans-serif;
+            font-family: "Cursive", sans-serif;
             white-space: nowrap;
             overflow: hidden;
             border-right: 3px solid white;
@@ -88,10 +88,28 @@
             transform: translateY(20px);
             transition: opacity 1s ease-out, transform 1s ease-out;
             margin: 30px auto;
+            color: white;
         }
         .description.show {
             opacity: 1;
             transform: translateY(0);
+        }
+        /* Stylizacja cytatów */
+        .quotes {
+            display: none;
+            font-size: 18px;
+            font-family: "Courier New", sans-serif;
+            margin-top: 30px;
+            max-width: 500px;
+            text-align: center;
+            color: white;
+        }
+        .quotes p {
+            margin-bottom: 15px;
+        }
+        .quotes .author {
+            font-size: 14px;
+            font-style: italic;
         }
     </style>
 </head>
@@ -114,8 +132,14 @@
         </div>
         <!-- Krótki opis -->
         <p id="description" class="description">
-            Hi. I'm 4skm. I like building shit and play shit games.
+            Hi. I'm 4skm. I like playing games, watching anime and building shit. <br/>
+            Quote that guides me in life:
         </p>
+    </div>
+
+    <!-- Sekcja z cytatami -->
+    <div class="quotes" id="quotesSection">
+        <p>"Be the master of your mouth, or you will be the slave of your words." <br> <span class="author">- Les Brown</span></p>
     </div>
 
     <!-- Odtwarzacz YouTube, tylko audio -->
@@ -129,6 +153,7 @@
             document.getElementById("mainContent").classList.remove("hidden");
             animateNickname("@4skm");
             showDescription();
+            showQuotes();  // Pokazuje cytaty po kliknięciu "Click Me"
         });
 
         function animateNickname(nick) {
@@ -162,6 +187,11 @@
         function showDescription() {
             let description = document.getElementById("description");
             description.classList.add("show");
+        }
+
+        // Funkcja wyświetlająca cytaty
+        function showQuotes() {
+            document.getElementById("quotesSection").style.display = "block";  // Pokazuje cytaty
         }
     </script>
 </body>
