@@ -16,7 +16,16 @@
             flex-direction: column;
             margin: 0;
             text-align: center;
+            background-size: cover; 
+            background-position: center; 
+            background-attachment: fixed;
+            height: 100vh;
+            margin: 0;
         }
+        .social-links img:hover {
+            transform: scale(1.2) rotate(15deg);
+        }
+
         .time-display {
             position: absolute;
             top: 10px;
@@ -88,7 +97,6 @@
             transform: translateY(20px);
             transition: opacity 1s ease-out, transform 1s ease-out;
             margin: 30px auto;
-            color: white;
         }
         .description.show {
             opacity: 1;
@@ -102,7 +110,6 @@
             margin-top: 30px;
             max-width: 500px;
             text-align: center;
-            color: white;
         }
         .quotes p {
             margin-bottom: 15px;
@@ -111,6 +118,7 @@
             font-size: 14px;
             font-style: italic;
         }
+        
     </style>
 </head>
 <body>
