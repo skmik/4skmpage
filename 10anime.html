@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Top 10 Anime</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('background.gif') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            font-family: Arial, sans-serif;
+            flex-direction: column;
+            margin: 0;
+            text-align: center;
+        }
+        .time-display {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 24px;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: black;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+        .hidden {
+            display: none;
+        }
+        .content {
+            text-align: center;
+            margin-top: 20px;
+            background-color: black;
+            padding: 40px 20px;
+            border-radius: 10px;
+        }
+        h1 {
+            font-size: 36px;
+            font-family: "Cursive", sans-serif;
+        }
+        .anime-list {
+            font-family: "Courier New", sans-serif;
+            margin-top: 20px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .anime-item {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .anime-item span {
+            font-weight: bold;
+        }
+        .anime-item a {
+            color: white;
+            text-decoration: none;
+        }
+        .anime-item a:hover {
+            text-decoration: underline;
+        }
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            justify-content: center;
+        }
+        .social-links img {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s;
+        }
+        .social-links img:hover {
+            transform: scale(1.2);
+        }
+        /* Stylizacja zegara */
+        .time-display {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 24px;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: black;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="time-display" id="timeDisplay"></div>
+    <div class="content">
+        <h1>My Top 10 Anime</h1>
+        <div class="anime-list">
+            <div class="anime-item"><span>1.</span> <a href="https://myanimelist.net/anime/269/Bleach" target="_blank">Bleach</a></div>
+            <div class="anime-item"><span>2.</span> <a href="https://myanimelist.net/anime/16498/Shingeki_no_Kyojin" target="_blank">Attack On Titan</a></div>
+            <div class="anime-item"><span>3.</span> <a href="https://myanimelist.net/anime/44217/Horimiya" target="_blank">HoriMiya</a></div>
+            <div class="anime-item"><span>4.</span> <a href="https://myanimelist.net/anime/14837/Suki_toka_Daisuki_toka" target="_blank">Say "I Love You"</a></div>
+            <div class="anime-item"><span>5.</span> <a href="https://myanimelist.net/anime/109802/Mushoku_Tensei__Isekai_Ittara_Honki_Dasu" target="_blank">Mushoku Tensei</a></div>
+            <div class="anime-item"><span>6.</span> <a href="https://myanimelist.net/anime/40906/Tensei_Shitara_Slime_Datta_Ken" target="_blank">That Time I Got Reincarnated as a Slime</a></div>
+            <div class="anime-item"><span>7.</span> <a href="https://myanimelist.net/anime/47872/Yofukashi_no_Uta" target="_blank">Call of the Night</a></div>
+            <div class="anime-item"><span>8.</span> <a href="https://myanimelist.net/anime/36661/Seishun_Buta_Yarou_wa_Bunny_Girl_Senpai_no_Yume_wo_Minai" target="_blank">Bunny Girl Senpai</a></div>
+            <div class="anime-item"><span>9.</span> <a href="https://myanimelist.net/anime/45968/Isekai_Seikatsu_no_Guide_to_Level_2_Super_Cheat_Powers" target="_blank">Chillin' in Another World with Level 2 Super Cheat Powers</a></div>
+            <div class="anime-item"><span>10.</span> <a href="https://myanimelist.net/anime/103245/Kaiju_No_8" target="_blank">Kaiju No. 8</a></div>
+        </div>
+        <div class="social-links">
+            <a href="https://discord.com/invite/4skm" target="_blank"><img src="discord.png" alt="Discord"></a>
+            <a href="https://www.tiktok.com/@czteryskm" target="_blank"><img src="tiktok.png" alt="TikTok"></a>
+            <a href="https://steamcommunity.com/profiles/76561199096653467/" target="_blank"><img src="steam.png" alt="Steam"></a>
+            <a href="https://www.roblox.com/users/3753245499/profile" target="_blank"><img src="roblox.png" alt="Roblox"></a>
+            <a href="https://www.youtube.com/@4skm2137" target="_blank"><img src="youtube.png" alt="YouTube"></a>
+            <a href="https://www.instagram.com/czteryskm/" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+            <a href="https://github.com/skmik" target="_blank"><img src="github.png" alt="GitHub"></a>
+        </div>
+    </div>
+
+    <script>
+        function updateTime() {
+            let now = new Date();
+            document.getElementById("timeDisplay").textContent = now.toLocaleTimeString();
+        }
+
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+</body>
+</html>
